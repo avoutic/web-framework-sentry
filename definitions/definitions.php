@@ -1,10 +1,11 @@
 <?php
 
-namespace WebFramework;
+namespace WebFramework\Sentry;
 
+use DI;
 use Psr\Container\ContainerInterface;
 use Sentry\ClientInterface;
-use WebFramework\Sentry\SentryClientFactory;
+use WebFramework\Diagnostics\Instrumentation;
 
 return [
     ClientInterface::class => function (ContainerInterface $container) {
@@ -13,4 +14,6 @@ return [
 
         return $factory->get($options);
     },
+
+    Instrumentation::class => DI\get(SentryInstrumentation::class),
 ];

@@ -16,7 +16,7 @@ use Sentry\SentrySdk;
 use Sentry\Tracing\SpanContext;
 use Sentry\Tracing\Transaction;
 use Sentry\Tracing\TransactionContext;
-use WebFramework\Core\Instrumentation;
+use WebFramework\Diagnostics\Instrumentation;
 
 /**
  * Class SentryInstrumentation.

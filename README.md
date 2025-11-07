@@ -8,6 +8,18 @@ Sentry instrumentation for WebFramework, providing performance monitoring and tr
 composer require web-framework/sentry
 ```
 
+Make sure the definitions file is included in your project by adding it to `definition_files` in your `config.php` file:
+
+```php
+return [
+    'definition_files' => [
+        '../vendor/avoutic/web-framework/definitions/definitions.php',
+        '../vendor/avoutic/web-framework-sentry/definitions/definitions.php',
+        'app_definitions.php',
+    ],
+];
+```
+
 ## Usage
 
 The module provides Sentry integration for WebFramework, enabling performance monitoring and distributed tracing. It implements the WebFramework Instrumentation interface to track transactions and spans.
